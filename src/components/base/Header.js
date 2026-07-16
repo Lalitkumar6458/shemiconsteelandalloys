@@ -97,12 +97,11 @@ const Header = () => {
     }, [])
 
     return (
-        <header 
-            className={`bg-white shadow-lg w-full
-                transition-all duration-300 ease-in-out
-                ${isScrolled 
-                    ? 'fixed top-0 left-0 right-0 z-40 animate-slideDown' 
-                    : 'relative'
+        <header
+            className={`w-full transition-all duration-300 ease-in-out
+                ${isScrolled
+                    ? 'fixed top-0 left-0 right-0 z-40 animate-slideDown bg-white/95 backdrop-blur-md shadow-xl'
+                    : 'relative bg-white shadow-md'
                 }`}
             style={{
                 top: isScrolled ? '0' : 'auto',
@@ -129,28 +128,27 @@ const Header = () => {
                     {/* Combined Desktop Menu and Buttons */}
                     <div className="hidden lg:flex items-center justify-end flex-1 space-x-8">
                         {/* Desktop Menu */}
-                        <div className="flex items-center space-x-5">
+                        <div className="flex items-center space-x-1">
                             {headerData.map((item, index) => (
                                 <div key={index} className="relative group">
                                     <Link
                                         href={item.path}
-                                        className={`relative flex items-center space-x-2 text-gray-800 hover:text-red-700 px-4 py-2 text-[15px] font-poppins font-semibold uppercase tracking-wide transition-all duration-300 ease-in-out
-                                            after:absolute after:bottom-0 after:left-4 after:right-4 after:h-[3px] after:rounded-full after:bg-gradient-sunset after:origin-left after:transition-transform after:duration-300
-                                            ${pathname === item.path ? 'text-red-700 after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'}`}
+                                        className={`relative flex items-center gap-1.5 hover:text-red-700 px-3 py-2 text-[14px] font-poppins font-semibold uppercase tracking-wide transition-all duration-300 ease-in-out rounded-lg hover:bg-red-50/60
+                                            after:absolute after:-bottom-0.5 after:left-3 after:right-3 after:h-[3px] after:rounded-full after:bg-gradient-sunset after:origin-left after:transition-transform after:duration-300
+                                            ${pathname === item.path ? 'text-red-700 after:scale-x-100' : 'text-gray-800 after:scale-x-0 hover:after:scale-x-100'}`}
                                     >
-                                        {item.icon}
                                         <span>{item.name}</span>
-                                        {item.submenu && <FiChevronDown className="ml-1 w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" />}
+                                        {item.submenu && <FiChevronDown className="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" />}
                                     </Link>
                                     
                                     {item.submenu && item.submenu.length > 0 && (
-                                        <div className="absolute left-0 mt-2 w-56  shadow-xl bg-white transform opacity-0 invisible scale-95 group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-easternBlue">
-                                            <div className="">
+                                        <div className="absolute left-0 mt-1 w-64 rounded-xl shadow-2xl bg-white transform opacity-0 invisible scale-95 group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-[3px] border-easternBlue overflow-hidden">
+                                            <div className="py-1">
                                                 {item.submenu.map((subItem, subIndex) => (
                                                     <div key={subIndex} className="relative group/sub">
                                                         <Link 
                                                             href={subItem.path}
-                                                            className=" px-4 py-3 flex items-center justify-between text-sm text-gray-700 hover:bg-red-700/10 hover:text-gray-900 font-roboto transition-all duration-300 border-b"
+                                                            className="px-5 py-3 flex items-center justify-between text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-red-700 hover:pl-6 font-roboto transition-all duration-300 border-b border-gray-50 last:border-0"
                                                         >
                                                             {subItem.name}
                                                             {subItem.submenu && <FiChevronRight className="inline ml-2 w-4 h-4" />}
@@ -190,17 +188,17 @@ const Header = () => {
                             </Link>
                             <button
                                 onClick={() => setIsSearchDrawerOpen(true)}
-                                className="p-2.5 hover:bg-gray-100 rounded-full transition-all duration-300 text-gray-600 hover:text-gray-900"
+                                className="p-2.5 border border-gray-200 hover:border-red-200 hover:bg-red-50 rounded-full transition-all duration-300 text-gray-500 hover:text-red-700"
                                 aria-label="Search"
                             >
-                                <FiSearch className="w-5 h-5" />
+                                <FiSearch className="w-[18px] h-[18px]" />
                             </button>
                             <button
                                 onClick={() => setIsInfoDrawerOpen(true)}
-                                className="p-2.5 hover:bg-gray-100 rounded-full transition-all duration-300 text-gray-600 hover:text-gray-900"
+                                className="p-2.5 border border-gray-200 hover:border-red-200 hover:bg-red-50 rounded-full transition-all duration-300 text-gray-500 hover:text-red-700"
                                 aria-label="Information"
                             >
-                                <FiInfo className="w-5 h-5" />
+                                <FiInfo className="w-[18px] h-[18px]" />
                             </button>
                         </div>
                     </div>
@@ -377,12 +375,12 @@ const Header = () => {
                                         <div className="flex-1">
                                             <p className="text-sm text-gray-600 mb-2">Phone Numbers</p>
                                             <div className="space-y-2">
-                                                <a href="tel:+917821031398" className="flex items-center text-catalinaBlue hover:text-burntSienna font-medium transition-all duration-300">
-                                                    <span className="text-sm text-gray-500 w-24">Aakash Modi:</span>
+                                                <a href="tel:+917821031398" className="flex flex-col items-start text-catalinaBlue hover:text-burntSienna font-medium transition-all duration-300">
+                                                    <span className="text-xs text-gray-500">Purchase - Akash Kumar</span>
                                                     +91 78210 31398
                                                 </a>
-                                                <a href="tel:+919890613050" className="flex items-center text-catalinaBlue hover:text-burntSienna font-medium transition-all duration-300">
-                                                    <span className="text-sm text-gray-500 w-24">Vipul Bhai:</span>
+                                                <a href="tel:+919890613050" className="flex flex-col items-start text-catalinaBlue hover:text-burntSienna font-medium transition-all duration-300">
+                                                    <span className="text-xs text-gray-500">Sales - Vipul Bafna</span>
                                                     +91 98906 13050
                                                 </a>
                                             </div>

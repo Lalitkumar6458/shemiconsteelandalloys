@@ -118,11 +118,11 @@ const Footer = () => {
             <div className="space-y-3.5 text-sm sm:text-base">
               <p className="flex items-center gap-3">
                 <BsTelephone className="text-tacao flex-shrink-0" />
-                <a href="tel:+917821031398" className="hover:text-tacao transition-colors">+91 78210 31398 <span className="text-gray-300 text-sm">(Aakash Modi)</span></a>
+                <a href="tel:+917821031398" className="hover:text-tacao transition-colors">+91 78210 31398 <span className="text-gray-300 text-sm">(Akash Kumar - Purchase)</span></a>
               </p>
               <p className="flex items-center gap-3">
                 <BsTelephone className="text-tacao flex-shrink-0" />
-                <a href="tel:+919890613050" className="hover:text-tacao transition-colors">+91 98906 13050 <span className="text-gray-300 text-sm">(Vipul Bhai)</span></a>
+                <a href="tel:+919890613050" className="hover:text-tacao transition-colors">+91 98906 13050 <span className="text-gray-300 text-sm">(Vipul Bafna - Sales)</span></a>
               </p>
               <p className="flex items-center gap-3">
                 <HiMail className="text-tacao flex-shrink-0 text-lg" />

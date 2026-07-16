@@ -2015,8 +2015,8 @@ export const DataInconel625SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -2533,8 +2533,8 @@ export const DataHastelloyC22SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -2672,8 +2672,8 @@ export const DataInconel600SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -2831,8 +2831,8 @@ export const DataInconel601SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -2974,8 +2974,8 @@ export const DataInconel800SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3124,8 +3124,8 @@ export const DataHS6BSS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3254,8 +3254,8 @@ export const DataCA6NMSS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3406,8 +3406,8 @@ export const DataDuplex138MOSS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3553,8 +3553,8 @@ export const DataMagnetic446SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3669,8 +3669,8 @@ export const DataMagnetic410SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3787,8 +3787,8 @@ export const DataMagnetic430SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"
@@ -3905,8 +3905,8 @@ export const DataMagnetic444SS = {
     contactInfo: {
         phone: "+91 78210 31398, +91 98906 13050",
         mobile: {
-            "Aakash Modi": "+91 78210 31398",
-            "Vipul Bhai": "+91 98906 13050"
+            "Akash Kumar (Purchase)": "+91 78210 31398",
+            "Vipul Bafna (Sales)": "+91 98906 13050"
         },
         email: [
             "semiconsteelandalloys@gmail.com"

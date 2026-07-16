@@ -84,10 +84,10 @@ const ContactPage = () => {
               <h3 className="text-lg sm:text-xl font-bold text-catalinaBlue">Call Us</h3>
             </div>
             <a href="tel:+917821031398" className="block text-sm sm:text-base text-gray-600 hover:text-burntSienna transition-colors">
-            +91 78210 31398 (Aakash Modi)
+            +91 78210 31398 (Akash Kumar - Purchase)
             </a>
             <a href="tel:+919890613050" className="block text-sm sm:text-base text-gray-600 hover:text-burntSienna transition-colors mt-2">
-              +91 98906 13050 (Vipul Bhai)
+              +91 98906 13050 (Vipul Bafna - Sales)
             </a>
           </div>
 
@@ -188,12 +188,14 @@ const ContactPage = () => {
             {/* Map */}
             <div className="h-[400px] sm:h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://maps.google.com/maps?q=Shree%20Sachhai%20Mata%20Park%2C%20Rahnal%2C%20Bhiwandi%2C%20Thane%2C%20Maharashtra%20421302&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.2834173938595!2d73.0335357!3d19.270037400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd004ffcbb4d%3A0xf7cf32e4d072199e!2sSemicon%20steel%20and%20alloys!5e0!3m2!1sen!2sin!4v1784207524516!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Semicon Steel And Alloys - Rahnal, Bhiwandi, Thane"
               ></iframe>
             </div>
           </div>

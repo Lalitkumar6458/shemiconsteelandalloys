@@ -26,6 +26,7 @@ export async function generateMetadata({ params }) {
 
 const Page = ({params}) => {
     const {subproductName} = params
+    const pageUrl = `https://www.semiconsteelandalloys.com/product/metal-scraps/${subproductName}`
     let data = {}
     
     const dataMap = {
@@ -40,6 +41,33 @@ const Page = ({params}) => {
     }
 
     data = dataMap[subproductName] || {}
+
+    const productJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: data.heading || slugTitles[subproductName] || 'Alloy Scrap',
+        description: `${data.heading || 'Alloy scrap'} - ISO 9001:2015 certified nickel alloy scrap importer, exporter & foundry supplier. Spectro-tested, graded material with worldwide delivery.`,
+        image: data.images?.map((img) => `https://www.semiconsteelandalloys.com${img}`) || [],
+        url: pageUrl,
+        brand: { '@type': 'Brand', name: 'Semicon Steel And Alloys' },
+        offers: {
+            '@type': 'Offer',
+            url: pageUrl,
+            priceCurrency: 'INR',
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'Organization', name: 'Semicon Steel And Alloys', telephone: '+917821031398' }
+        }
+    }
+
+    const breadcrumbJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.semiconsteelandalloys.com/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://www.semiconsteelandalloys.com/product' },
+            { '@type': 'ListItem', position: 3, name: data.heading || 'Alloy Scrap', item: pageUrl }
+        ]
+    }
 
     const getIconForProduct = (key) => {
         const iconMap = {
@@ -59,6 +87,8 @@ const Page = ({params}) => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
             {/* Hero Banner Section */}
             <section className="relative h-[300px] sm:h-[350px] md:h-[400px]">
                 <Image
@@ -146,6 +176,22 @@ const Page = ({params}) => {
                     <div className="lg:w-3/4">
                         {/* Product Images Grid */}
                  
+
+                        {/* Enquiry CTA */}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white rounded-xl shadow-md border-l-4 border-easternBlue p-5 mb-8">
+                            <div>
+                                <p className="font-poppins font-bold text-catalinaBlue text-base sm:text-lg">Buying or selling {data.heading || 'alloy scrap'}?</p>
+                                <p className="text-sm text-gray-600">Same-day quotes - call or WhatsApp with your material details.</p>
+                            </div>
+                            <div className="flex gap-3 flex-shrink-0">
+                                <a href="tel:+917821031398" className="inline-flex items-center gap-2 bg-gradient-sunset text-white px-5 py-2.5 rounded-lg font-poppins font-semibold text-sm shadow-md hover:scale-105 transition-all duration-300 whitespace-nowrap">
+                                    Call Now
+                                </a>
+                                <a href="https://wa.me/+917821031398" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg font-poppins font-semibold text-sm shadow-md transition-all duration-300 whitespace-nowrap">
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
 
                         {/* Main Product Description */}
                         <div className="prose max-w-none mb-12">

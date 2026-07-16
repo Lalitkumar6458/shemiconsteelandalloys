@@ -40,15 +40,15 @@ const Page = ({params}) => {
     if( params.productName === "metal-scraps"){
         data = metalScraps
         heading="Alloy Scrap"
-        title="High-Quality Alloy Scrap - All Types | Exporter and Importer of Nickel Alloy Scrap | Inconel 600 Scrap, Inconel 601 Scrap, Inconel 625 Scrap, Inconel 825 Scrap, Monel 400 Scrap, Hastelloy C276 Scrap, Hastelloy C22 Scrap, Alloy 20 Scrap | Nickel & Cobalt Alloy Scrap Supplier in India."
+        title="Exporter, importer and foundry supplier of all types of nickel alloy scrap - Inconel 600, 601, 625 & 825, Monel 400, Hastelloy C276 & C22, and Alloy 20 - available as solids, turnings and flush, spectro-tested and delivered across India and worldwide."
     }else if(params.productName === "ferro-alloy"){
         data = ferroAlloy
         heading="Ferro Alloy"
-        title="Ferro Alloys Importer, Supplier and Exporter | LC FE Chrome | Pure Moly | Misch Metal | Selenium Metallicum | Ferro Niobium | Ferro Vanadium | Ferro Tungsten | Tungsten Carbide | Pure Tungsten | Nitrated Ferro Chrome | Cobalt Metals | Ferrous & Non-Ferrous Metal Scrap | Alloy Metals Supplier in India"
+        title="Importer and supplier of ferro alloys - LC Fe Chrome, Pure Moly, Ferro Tungsten, Ferro Vanadium, Ferro Niobium, Tungsten Carbide, Nitrated Ferro Chrome, Cobalt Metals and Misch Metal - consistent chemistry for steel plants and foundries."
     }else if(params.productName === "high-nickel-alloys-scrap"){
         data = highNickelAlloysScrap
         heading="High Nickel Alloys Scrap"
-        title="High Nickel Alloys Scrap | Exporter and Importer of Nickel Alloys Scrap | Nickel Alloy Scrap Supplier in India"
+        title="Our specialty - exporter and importer of high nickel alloy scrap with full composition charts for Inconel, Hastelloy, Nimonic, Rene, Udimet and cobalt base alloys. India's trusted nickel alloy scrap supplier."
         
         return (
             <div className="min-h-screen bg-gray-50">
@@ -80,9 +80,9 @@ const Page = ({params}) => {
                 </section>
 
                 <div className="container mx-auto py-12 px-4 md:px-8">
-                    <h1 className="text-[12px] md:text-[12px] font-bold text-center mb-12 text-gray-800">
+                    <p className="text-sm sm:text-base text-gray-600 text-center max-w-4xl mx-auto mb-12 leading-relaxed">
                         {title}
-                    </h1>
+                    </p>
 
                     <div className="prose max-w-none mb-12">
                         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
@@ -91,7 +91,7 @@ const Page = ({params}) => {
 
                         <div className="bg-white rounded-xl p-8 shadow-lg">
                             <p className="text-gray-700 mb-6">
-                                At <span className="font-semibold">Semicon Steel And Alloys</span>, we offer <span className="font-semibold">nickel alloys</span> that surpass all quality standards and customer expectations. Our extensive industry experience has made us a leading name in supplying <a href="#" className="text-tacao hover:text-tacao/80">Inconel 600 alloy</a>, Hastelloy, and other nickel alloys.
+                                At <span className="font-semibold">Semicon Steel And Alloys</span>, we offer <span className="font-semibold">nickel alloys</span> that surpass all quality standards and customer expectations. Our extensive industry experience has made us a leading name in supplying <a href="/product/metal-scraps/inco_600_scrap" className="text-red-700 font-medium hover:underline">Inconel 600 alloy</a>, Hastelloy, and other nickel alloys.
                             </p>
 
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -124,14 +124,14 @@ const Page = ({params}) => {
                             <div key={product.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <div className="flex flex-col h-full">
                                     <div className="flex items-start mb-4">
-                                        <FiBox className="w-6 h-6 text-tacao mr-3 mt-1 flex-shrink-0" />
+                                        <FiBox className="w-6 h-6 text-easternBlue mr-3 mt-1 flex-shrink-0" />
                                         <h2 className="text-xl font-bold text-gray-800">{product.name}</h2>
                                     </div>
                                     <p className="text-gray-600 mb-6 flex-grow">{product.description}</p>
                                     <div className="mt-auto">
                                         <Link 
                                             href={product.link}
-                                            className="inline-flex items-center text-tacao hover:text-tacao/80 font-semibold transition-colors duration-300"
+                                            className="inline-flex items-center text-red-700 hover:text-red-500 font-semibold transition-colors duration-300"
                                         >
                                             Learn More
                                             <FiExternalLink className="w-4 h-4 ml-2" />
@@ -251,23 +251,23 @@ const Page = ({params}) => {
       </section>
 
       <div className="container mx-auto  py-12 ">
-        <h1 className="text-[12px] md:text-[12px] font-bold text-center mb-12 text-gray-800 px-[5%]">
+        <p className="text-sm sm:text-base text-gray-600 text-center max-w-4xl mx-auto mb-12 leading-relaxed px-[5%]">
           {title}
-        </h1>
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-[5%]">
           {data.map(product => (
             <div key={product.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex flex-col h-full">
                 <div className="flex items-start mb-4">
-                  <FiBox className="w-6 h-6 text-tacao mr-3 mt-1 flex-shrink-0" />
+                  <FiBox className="w-6 h-6 text-easternBlue mr-3 mt-1 flex-shrink-0" />
                   <h2 className="text-xl font-bold text-gray-800">{product.name}</h2>
                 </div>
                 <p className="text-gray-600 mb-6 flex-grow">{product.description}</p>
                 <div className="mt-auto">
                   <Link 
                     href={product.link}
-                    className="inline-flex items-center text-tacao hover:text-tacao/80 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center text-red-700 hover:text-red-500 font-semibold transition-colors duration-300"
                   >
                     Learn More
                     <FiExternalLink className="w-4 h-4 ml-2" />
