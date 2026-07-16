@@ -332,8 +332,27 @@ const Page = ({params}) => {
                         )}
 
                         {/* Export Destinations */}
-                        
-
+                        {data.exportDestinations && (
+                        <div className="mb-12">
+                            <h3 className="text-xl font-bold mb-3">We Export {data.heading} Worldwide</h3>
+                            <p className="text-sm sm:text-base text-gray-600 mb-6">
+                                As an ISO 9001:2015 certified exporter, we ship {data.heading?.toLowerCase()} with complete
+                                documentation and spectro test reports to the following countries:
+                            </p>
+                            <div className="bg-white rounded-xl shadow-md p-5 sm:p-7">
+                                <div className="flex flex-wrap gap-2">
+                                    {[...new Set(data.exportDestinations.flat())].map((country) => (
+                                        <span
+                                            key={country}
+                                            className="px-3 py-1 rounded-full bg-red-50 border border-red-100 text-xs sm:text-sm text-gray-700 hover:bg-easternBlue hover:text-white hover:border-easternBlue transition-colors duration-300 cursor-default"
+                                        >
+                                            {country}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        )}
 
                     </div>
                 </div>

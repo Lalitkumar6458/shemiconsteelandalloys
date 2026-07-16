@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FiHome, FiBox, FiLayers, FiDatabase, FiArrowRight, FiCheckCircle, FiPhone } from 'react-icons/fi'
+import ImportExport from '@/components/ImportExport'
 
 export const metadata = {
   title: "Products - All Types of Alloy Scrap, Nickel Alloys & Ferro Alloys",
@@ -174,6 +175,9 @@ const page = () => {
           </p>
         </div>
       </section>
+
+      {/* Import & Export */}
+      <ImportExport />
 
       {/* FAQ (visible, matches JSON-LD) */}
       <section className="py-14 sm:py-16 px-4">
