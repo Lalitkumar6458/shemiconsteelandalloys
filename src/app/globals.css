@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Semicon Steel And Alloys - Red + Steel Gray theme */
+  --eastern-blue: #b91c1c;   /* primary red (buttons, icons) */
+  --green-white: #f1f5f9;    /* light steel background */
+  --burnt-sienna: #991b1b;   /* dark red hover/accent */
+  --tacao: #fca5a5;          /* light red (hover text on dark) */
+  --glacier: #cbd5e1;        /* light steel accent */
+  --eternity: #1f2937;       /* dark text */
+  --burnt-umber: #7f1d1d;    /* deepest red */
+  --powder-blue: #e2e8f0;    /* pale steel */
+  --catalina-blue: #263238;  /* dark steel (headings) */
+  --chathams-blue: #37474f;  /* steel gray */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+ 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slick-next:before, .slick-prev:before {
+  color: #eb1d36 !important;
+}
+
+.animate-fade-in > * {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in > *:nth-child(1) { animation-delay: 0.2s; }
+.animate-fade-in > *:nth-child(2) { animation-delay: 0.4s; }
+.animate-fade-in > *:nth-child(3) { animation-delay: 0.6s; }
+.animate-fade-in > *:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-slideDown {
+    animation: slideDown 0.3s ease-in-out;
+}
